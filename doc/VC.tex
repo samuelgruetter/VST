@@ -3002,13 +3002,12 @@ be a literal constant, it just needs to be invariant.
 
 For these loops you can use the tactic,
 \begin{lstlisting}
- forward_for_simple_bound $n$ $~$     (EX $i$:Z, PROP($\vec{P}$) LOCAL($\vec{Q}$) SEP($\vec{R}$).
+ forward_for_simple_bound $n$ $~$     (EX $i$:Z, PROP($\vec{P}$) LOCAL($\vec{Q}$) SEP($\vec{R}$)).
 \end{lstlisting}
 where $n$ is the upper bound: a Coq value of type $Z$ 
 such that \textit{hi} will evaluate to $n$.
-
 The loop invariant is given by the expression
-\lstinline{(EX $i$:Z, PROP($\vec{P}$) LOCAL($\vec{Q}$) SEP($\vec{R}$)},
+\lstinline{(EX $i$:Z, PROP($\vec{P}$) LOCAL($\vec{Q}$) SEP($\vec{R}$))},
 where $i$ is the value (in each iteration) of the loop iteration variable $\mathit{id}$.
 This tactic generates simpler subgoals than the general \lstinline{forward_for} tactic.
 
